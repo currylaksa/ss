@@ -102,6 +102,17 @@ def create_overlay(subcon, receiver, date_str):
 
 def main():
     st.set_page_config(page_title="Auto-Sign PDF", layout="centered")
+
+    # --- HIDE STREAMLIT STYLE ---
+    hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+    st.markdown(hide_st_style, unsafe_allow_html=True)
+    
     st.title("📝 SS")
     st.write("Upload a Delivery Note/POD PDF to automatically sign the Subcon, Receiver Name, and Date.")
 
@@ -162,3 +173,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
