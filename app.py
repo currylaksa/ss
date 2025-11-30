@@ -102,7 +102,7 @@ def create_overlay(subcon, receiver, date_str):
 
 def main():
     st.set_page_config(page_title="Auto-Sign PDF", layout="centered")
-    st.title("📝 Huawei POD Auto-Signer")
+    st.title("📝 SS")
     st.write("Upload a Delivery Note/POD PDF to automatically sign the Subcon, Receiver Name, and Date.")
 
     # 1. File Uploader
@@ -160,4 +160,5 @@ def main():
                 st.error("Could not extract Subcon or Receiver information. Please check the PDF format.")
 
 if __name__ == "__main__":
+
     main()
